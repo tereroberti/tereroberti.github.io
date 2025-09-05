@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">  
+  <title>Admin Productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="../img/logo-gift.png" alt="logo de Admin Gift" style="height:40px; width:auto;" class="me-2">
+          <span class="fw-bold">Admin Gift</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+ <div class="container-fluid">
+    <div class="row">
+
+      <aside class="col-12 col-md-3 col-lg-2 bg-light p-3">
+        <button class="btn boton-outline-secundario w-10 d-md-none mb-3 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuCollapse" aria-expanded="false" aria-controls="menuCollapse">
+          Menú
+        </button>
+
+        <div class="collapse d-md-block" id="menuCollapse">
+          <h2 class="display-6 d-none d-md-block mb-4">Menú</h2>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="dashboard.html" class="nav-link link">Dashboard</a></li>
+      <li class="nav-item mb-2"><a href="usuarios.html" class="nav-link link">Usuarios</a></li>
+      <li class="nav-item mb-2"><a href="ordenes.html" class="nav-link link">Órdenes</a></li>
+      <li class="nav-item mb-2"><a href="productos.html" class="nav-link link">Productos</a></li>
+      <li class="nav-item mb-2"><a href="categorias.html" class="nav-link link">Categorías</a></li>
+      </ul>
+        </div>
+      </aside>
+
+
+     <main class="col-12 col-md-9 col-lg-10">
+      <section>
+  <div class="container my-3">
+    <h1 class="mb-4 my-4">Administración de Productos</h1>
+
+    <div class="mb-3 text-start">
+      <a href="producto-alta.html" class="btn boton-agregar">
+        <i class="bi bi-plus-circle me-1"></i> Nuevo Producto
+      </a>
+    </div>
+
+    <!-- Tabla para desktop -->
+    <div class="table-responsive shadow-sm overflow-hidden d-none d-md-block">
+      <table class="table table-hover table-bordered align-middle mb-0">
+        <thead class="table-light text-center text-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Promoción</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center">
+            <td class="text-start">Florero Petróleo</td>
+            <td>$11.500</td>
+            <td>Plástico</td>
+            <td>-</td>
+            <td><img src="../img/petroleo.png" alt="Florero Petróleo" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Cerámica Gris</td>
+            <td>$22.500</td>
+            <td>Cerámica</td>
+            <td>-</td>
+            <td><img src="../img/ceramica.jpg" alt="Florero Cerámica Gris" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Negro</td>
+            <td>$11.500</td>
+            <td>Plástico</td>
+            <td>-</td>
+            <td><img src="../img/negro.png" alt="Florero Negro" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Verde</td>
+            <td>$11.500</td>
+            <td>Plástico</td>
+            <td>-</td>
+            <td><img src="../img/verde.jpg" alt="Florero Verde" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Vidrio</td>
+            <td>$45.800</td>
+            <td>Vidrio</td>
+            <td>-</td>
+            <td><img src="../img/vidrio.jpg" alt="Florero Vidrio" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Vidrio Verde</td>
+            <td>$45.800</td>
+            <td>Vidrio</td>
+            <td>-</td>
+            <td><img src="../img/vidrio2.jpg" alt="Florero Vidrio Verde" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Violeta</td>
+            <td>$11.500</td>
+            <td>Plástico</td>
+            <td>-</td>
+            <td><img src="../img/violeta.jpg" alt="Florero Violeta" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Pack x4</td>
+            <td>$110.200</td>
+            <td>Cerámica</td>
+            <td>-</td>
+            <td><img src="../img/muchos.webp" alt="Florero Pack x4" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Cerámica Blanco</td>
+            <td>$24.500</td>
+            <td>Cerámica</td>
+            <td>-</td>
+            <td><img src="../img/ceramica2.webp" alt="Florero Cerámica Blanco" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+
+          <tr class="text-center">
+            <td class="text-start">Florero Azul</td>
+            <td>$11.500</td>
+            <td>Plástico</td>
+            <td>-</td>
+            <td><img src="../img/Azul.png" alt="Florero Azul" style="height:50px;border-radius:8px;object-fit:cover;"></td>
+            <td>
+                            <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Versión para móvil -->
+    <div class="d-md-none">
+      <div class="accordion" id="accordionProductos">
+
+        <!-- Producto 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+              Florero Petróleo - $11.500
+            </button>
+          </h2>
+          <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Plástico</p>
+              <p><strong>Imagen:</strong><br><img src="../img/petroleo.png" alt="Florero Petróleo" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+              Florero Cerámica Gris - $22.500
+            </button>
+          </h2>
+          <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Cerámica</p>
+              <p><strong>Imagen:</strong><br><img src="../img/ceramica.jpg" alt="Florero Cerámica Gris" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+              Florero Negro - $11.500
+            </button>
+          </h2>
+          <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Plástico</p>
+              <p><strong>Imagen:</strong><br><img src="../img/negro.png" alt="Florero Negro" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false">
+              Florero Verde - $11.500
+            </button>
+          </h2>
+          <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Plástico</p>
+              <p><strong>Imagen:</strong><br><img src="../img/verde.jpg" alt="Florero Verde" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false">
+              Florero Vidrio - $45.800
+            </button>
+          </h2>
+          <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Vidrio</p>
+              <p><strong>Imagen:</strong><br><img src="../img/vidrio.jpg" alt="Florero Vidrio" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false">
+              Florero Vidrio Verde - $45.800
+            </button>
+          </h2>
+          <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Vidrio</p>
+              <p><strong>Imagen:</strong><br><img src="../img/vidrio2.jpg" alt="Florero Vidrio Verde" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false">
+              Florero Violeta - $11.500
+            </button>
+          </h2>
+          <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Plástico</p>
+              <p><strong>Imagen:</strong><br><img src="../img/violeta.jpg" alt="Florero Violeta" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false">
+              Florero Pack x4 - $110.200
+            </button>
+          </h2>
+          <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Cerámica</p>
+              <p><strong>Imagen:</strong><br><img src="../img/muchos.webp" alt="Florero Pack x4" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 9 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading9">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false">
+              Florero Cerámica Blanco - $24.500
+            </button>
+          </h2>
+          <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Cerámica</p>
+              <p><strong>Imagen:</strong><br><img src="../img/ceramica2.webp" alt="Florero Cerámica Blanco" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 10 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading10">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false">
+              Florero Azul - $11.500
+            </button>
+          </h2>
+          <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionProductos">
+            <div class="accordion-body">
+              <p><strong>Categoría:</strong> Plástico</p>
+              <p><strong>Imagen:</strong><br><img src="../img/Azul.png" alt="Florero Azul" style="height:60px;border-radius:8px;object-fit:cover;"></p>
+              <div class="d-flex gap-2 mt-3">
+                              <a href="producto.html" class="btn boton-ver btn-sm ">Ver</a>
+              <a href="producto-editar.html" title="Editar" class="btn boton-editar btn-sm mb-1 text-dark"><img class="m-1" src="../img/edita.png" style="height: 16px;" alt="lapiz edit"></a>
+              <a href="producto-borrar.html" class="btn boton-eliminar btn-sm mb-1">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+</div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../js/admin.js"></script>
+
+  </body>
+
+</html>

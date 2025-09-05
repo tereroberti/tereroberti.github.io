@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">  
+    <title>Admin Orden N#1007</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="../img/logo-gift.png" alt="logo de Admin Gift" style="height:40px; width:auto;" class="me-2">
+          <span class="fw-bold">Admin Gift</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+ <div class="container-fluid">
+    <div class="row">
+
+      <aside class="col-12 col-md-3 col-lg-2 bg-light p-3">
+        <button class="btn boton-outline-secundario w-10 d-md-none mb-3 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuCollapse" aria-expanded="false" aria-controls="menuCollapse">
+          Menú
+        </button>
+
+        <div class="collapse d-md-block" id="menuCollapse">
+          <p class="display-6 d-none d-md-block mb-4">Menú</p>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="dashboard.html" class="nav-link link">Dashboard</a></li>
+      <li class="nav-item mb-2"><a href="usuarios.html" class="nav-link link">Usuarios</a></li>
+      <li class="nav-item mb-2"><a href="ordenes.html" class="nav-link link">Órdenes</a></li>
+      <li class="nav-item mb-2"><a href="productos.html" class="nav-link link">Productos</a></li>
+      <li class="nav-item mb-2"><a href="categorias.html" class="nav-link link">Categorías</a></li>
+      </ul>
+        </div>
+      </aside>
+
+    <!-- Contenido principal -->
+    <main class="col-12 col-md-9 col-lg-10 order-2 order-md-2 p-4">
+      <h1 class="mb-4">Detalle de Orden #1007</h1>
+
+      <!-- Información de la orden -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Datos de la Orden</h5>
+          <p><strong>Usuario:</strong> Juan Pérez</p>
+          <p><strong>Email:</strong> juanperez@example.com</p>
+          <p><strong>Fecha de creación:</strong> 25/08/2025</p>
+          <p><strong>Estado de la orden:</strong> <span class="badge bg-success">Completada</span></p>
+          <p><strong>Método de pago:</strong> Tarjeta</p>
+          <p><strong>Total:</strong> $91.300</p>
+          <p><strong>Dirección de envío:</strong> Calle Falsa 123, Ciudad, País</p>
+        </div>
+      </div>
+
+      <!-- Tabla de items -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Items de la Orden</h5>
+          <div class="table-responsive">
+            <table class="table table-striped align-middle">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio Unitario</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Florero Cerámica Gris</td>
+                  <td>1</td>
+                  <td>$22.500</td>
+                  <td>$22.500</td>
+                </tr>
+                <tr>
+                  <td>Florero Negro</td>
+                  <td>2</td>
+                  <td>$11.500</td>
+                  <td>$23.000</td>
+                </tr>
+                <tr>
+                  <td>Florero Vidrio</td>
+                  <td>1</td>
+                  <td>$45.800</td>
+                  <td>$45.800</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="3" class="text-end">Total:</th>
+                  <th>$91.300</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acciones -->
+      <div class="d-flex flex-wrap justify-content-end gap-2">
+        <a href="usuario-detalle.html" class="btn boton-agregar">Volver al Usuario</a>
+        <a href="ordenes.html" class="btn boton-ver">Volver a Órdenes</a>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

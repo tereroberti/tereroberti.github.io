@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/site.webmanifest">  
+  <title>Admin Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <div class="container-fluid d-flex align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="../img/logo-gift.png" alt="logo de Admin Gift" style="height:40px; width:auto;" class="me-2">
+          <span class="fw-bold">Admin Gift</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+ <div class="container-fluid">
+    <div class="row">
+
+      <aside class="col-12 col-md-3 col-lg-2 bg-light p-3">
+        <button class="btn boton-outline-secundario w-10 d-md-none mb-3 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuCollapse" aria-expanded="false" aria-controls="menuCollapse">
+          Menú
+        </button>
+
+        <div class="collapse d-md-block" id="menuCollapse">
+          <p class="display-6 d-none d-md-block mb-4">Menú</p>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="login.html" class="nav-link link">Iniciar Sesión</a></li>
+      </ul>
+        </div>
+      </aside>
+      
+  <main class="col-12 col-md-9 col-lg-6 control-scroll">
+     <div class="container ring pt-4 mt-5 mb-5">
+      <i style="--clr: #ffd93d"></i>
+      <i style="--clr: #9c4dff"></i>
+      <i style="--clr: #4db6ff"></i>
+      <div class="login text-dark">
+        <h1>Login</h1>
+        <div class="inputBx text-dark">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" >
+        </div>
+        <div class="inputBx">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" >
+        </div>
+        <div>
+        <button href="dashboard.html" onclick="notificarYRedirigir('Login correcto! Bienvenido!', 'success', 'dashboard.html')"class="btn boton-primario fs-6">Ingresar</button>
+        </div>
+      </div>
+    </div>
+</main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/admin.js"></script>
+  </body>
+</html>

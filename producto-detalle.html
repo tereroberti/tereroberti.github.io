@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    >
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand logo" href="#">logo</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="catalogo.html"
+                  id="catalogoDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Catálogo
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+                  <li>
+                    <a class="dropdown-item categoria-nav" href="catalogo.html"
+                      >Florero</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item subcategoria-nav"
+                      href="catalogo.html"
+                      >Cerámica</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item subcategoria-nav"
+                      href="catalogo.html"
+                      >Vidrio</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item subcategoria-nav"
+                      href="catalogo.html"
+                      >Plástico</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <div class="d-flex">
+              <div class="dropdown me-3">
+                <a
+                  class="btn dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Usuario</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                  <li>
+                    <a class="dropdown-item" href="iniciar-sesion.html"
+                      >Iniciar sesión</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="registrarse.html"
+                      >Registrarse</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="mi-perfil.html">Mi perfil</a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                class="btn boton-carrito"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasCart"
+                aria-controls="offcanvasCart"
+              >
+                <i class="bi bi-cart3"></i>
+                <span id="cartCount" class="badge bg-rojo">0</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- OFFCANVAS CARRITO -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart">
+        <div class="offcanvas-header">
+          <p class="offcanvas-title">🛒 Carrito</p>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul id="cart" class="list-group mb-3"></ul>
+          <p>
+            Items <span id="ItemCount" class="badge bg-rojo">0</span
+            ><button
+              class="btn boton-outline-secundario bg-white w-20 mx-2"
+              title="Vaciar carrito"
+              onclick="clearCart()"
+            >
+              <img
+                class="mb-1"
+                src="img/contenedor-de-basura.png"
+                style="height: 16px"
+                alt="tacho de basura"
+              >
+            </button>
+          </p>
+          <p class="fw-bold">Total: $<span id="total">0</span></p>
+          <a class="btn boton-agregar" href="checkout.html">Comprar</a>
+        </div>
+      </div>
+      <section class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="text-decoration-none">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="catalogo.html" class="text-decoration-none">Productos</a>
+            </li>
+            <li class="breadcrumb-item active">Florero Petróleo</li>
+          </ol>
+        </nav>
+
+        <div class="row g-4 align-items-center">
+          <!-- Imagen -->
+          <div class="col-md-5">
+            <div
+              class="ratio ratio-1x1 bg-light rounded d-flex justify-content-center align-items-center"
+            >
+              <div class="w-100 h-100 img-producto-detalle"></div>
+            </div>
+          </div>
+
+          <!-- Descripción -->
+          <div class="col-md-7 descripcion-producto">
+            <h1 class="fw-bold mb-3 mt-3">Florero Petróleo</h1>
+            <div>
+              <p class="mt-2 mb-2">
+                Florero de plástico color petróleo, hecho de PVC.<br>
+                Con capacidad de hasta 1 litro de líquido para que te olvides de
+                regar.<br>
+                A prueba de derrames, resistente a golpes y caídas.<br>
+                Ideal para ambientes con niños y mascotas.<br>
+                Diseño elegante y discreto.
+              </p>
+            </div>
+            <p class="mt-2 mb-1 text-muted">
+              <strong>Categoría:</strong> Plástico
+            </p>
+            <p class="mb-1 text-muted"><strong>Medidas:</strong> 25x8 cm</p>
+            <p class="mb-3 text-muted"><strong>Peso:</strong> 300 gr</p>
+            <form>
+              <p>Colores disponibles:</p>
+
+              <label class="color-option" style="--color: #4bcffa">
+                <input type="radio" name="color" value="azul" >
+                <span></span>
+              </label>
+
+              <label class="color-option" style="--color: #9b5de5">
+                <input type="radio" name="color" value="violeta" >
+                <span></span>
+              </label>
+
+              <label class="color-option" style="--color: #000000">
+                <input type="radio" name="color" value="negro" >
+                <span></span>
+              </label>
+            </form>
+            <p class="fw-bold fs-4 text-primary">Precio: $11.500</p>
+            <p class="mt-2 mb-3">
+              Encargando <strong>hoy</strong> llega dentro de las 48hs en AMBA
+            </p>
+            <div class="d-flex gap-2 mt-3">
+              <a
+                class="btn boton-agregar"
+                href="#"
+                onclick="addToCart('Florero Petróleo', 11500, 'img/petroleo.png')"
+                >Agregar al carrito</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="background pb-5">
+        <div class="container py-5 mt-3">
+          <h2 class="text-muted text-center mb-5">Más de ésta categoría</h2>
+
+          <div class="row g-3 mt-5">
+            <!-- Florero 1 -->
+            <div class="col-6 col-md-2">
+              <a
+                href="producto-detalle.html"
+                class="product-card d-block text-decoration-none text-dark position-relative"
+              >
+                <img
+                  src="img/violeta.jpg"
+                  class="img-fluid"
+                  alt="Florero plastico color violeta"
+                >
+                <h3 class="mt-2 fs-6">Florero violeta</h3>
+                <p class="fw-bold">$ 11.500</p>
+                <div
+                  class="hover-overlay d-flex align-items-center justify-content-center"
+                >
+                  <span>Ver más</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Florero 2 -->
+            <div class="col-6 col-md-2">
+              <a
+                href="producto-detalle.html"
+                class="product-card d-block text-decoration-none text-dark position-relative"
+              >
+                <img
+                  src="img/verde.jpg"
+                  class="img-fluid"
+                  alt="Florero plastico color verde"
+                >
+                <h3 class="mt-2 fs-6">Florero verde</h3>
+                <p class="fw-bold">$ 11.500</p>
+                <div
+                  class="hover-overlay d-flex align-items-center justify-content-center"
+                >
+                  <span>Ver más</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Florero 3 -->
+            <div class="col-6 col-md-2">
+              <a
+                href="producto-detalle.html"
+                class="product-card d-block text-decoration-none text-dark position-relative"
+              >
+                <img
+                  src="img/vidrio.jpg"
+                  class="img-fluid"
+                  alt="Florero vidrio transparente"
+                >
+                <h3 class="mt-2 fs-6">Florero vidrio</h3>
+                <p class="fw-bold">$ 45.800</p>
+                <div
+                  class="hover-overlay d-flex align-items-center justify-content-center"
+                >
+                  <span>Ver más</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Florero 4 -->
+            <div class="col-6 col-md-2">
+              <a
+                href="producto-detalle.html"
+                class="product-card d-block text-decoration-none text-dark position-relative"
+              >
+                <img
+                  src="img/vidrio2.jpg"
+                  class="img-fluid"
+                  alt="Florero vidrio verde"
+                >
+                <h3 class="mt-2 fs-6">Florero vidrio verde</h3>
+                <p class="fw-bold">$ 45.800</p>
+                <div
+                  class="hover-overlay d-flex align-items-center justify-content-center"
+                >
+                  <span>Ver más</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Florero 5 -->
+            <div class="col-6 col-md-2">
+              <a
+                href="producto-detalle.html"
+                class="product-card d-block text-decoration-none text-dark position-relative"
+              >
+                <img
+                  src="img/cerámica.jpg"
+                  class="img-fluid"
+                  alt="Florero cerámica gris"
+                >
+                <h3 class="mt-2 fs-6">Florero cerámica gris</h3>
+                <p class="fw-bold">$ 22.500</p>
+                <div
+                  class="hover-overlay d-flex align-items-center justify-content-center"
+                >
+                  <span>Ver más</span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Florero 6 -->
+            <div class="col-6 col-md-2">
+              <a
+                href="producto-detalle.html"
+                class="product-card d-block text-decoration-none text-dark position-relative"
+              >
+                <img
+                  src="img/negro.png"
+                  class="img-fluid"
+                  alt="Florero plastico color negro"
+                >
+                <h3 class="mt-2 fs-6">Florero negro</h3>
+                <p class="fw-bold">$ 11.500</p>
+                <div
+                  class="hover-overlay d-flex align-items-center justify-content-center"
+                >
+                  <span>Ver más</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" class="py-5">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link px-2 text-body-secondary"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="catalogo.html" class="nav-link px-2 text-body-secondary"
+            >Catálogo</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="contacto.html" class="nav-link px-2 text-body-secondary"
+            >Contacto</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="nosotros.html" class="nav-link px-2 text-body-secondary"
+            >Nosotros</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="mi-perfil.html" class="nav-link px-2 text-body-secondary"
+            >Usuario</a
+          >
+        </li>
+      </ul>
+      <p class="text-center text-body-secondary">
+        Teresa.roberti@davinci.edu.com.ar
+      </p>
+      <p class="text-center text-body-secondary">Teresa Roberti © 1999</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/box.js"></script>
+  </body>
+</html>
